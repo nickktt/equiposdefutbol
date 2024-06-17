@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Fútbol de Francia</title>
+ <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7; /* Fondo gris claro */
+            color: #333333; /* Texto gris oscuro */
+            max-width: 1000px; /* Ancho máximo de la página */
+            margin: 0 auto; /* Centrar la página en el viewport */
+            padding: 20px; /* Espacio interno */
+            line-height: 1.6; /* Altura de línea para mejor legibilidad */
+            position: relative; /* Para posicionar los círculos */
+        }
+        header {
+            background-color: #292929; /* Fondo negro */
+            color: #c0c0c0; /* Texto color plateado */
+            text-align: center;
+            padding: 1em 0;
+            margin-bottom: 20px; /* Espacio inferior */
+            border-bottom: 3px solid #8b0000; /* Borde inferior rojo oscuro */
+        }
+        h1 {
+            color: #c0c0c0; /* Color plateado */
+            font-size: 2.5em; /* Tamaño grande para el título principal */
+            margin-bottom: 0.5em; /* Espacio inferior */
+        }
+        h2 {
+            color: #ffffff; /* Color blanco */
+            background-color: #3b5998; /* Azul oscuro pastel */
+            padding: 10px;
+            margin-top: 30px; /* Espacio superior */
+            margin-bottom: 15px; /* Espacio inferior */
+            border-radius: 5px;
+            font-size: 1.8em; /* Tamaño grande para subtítulos */
+        }
+        .team {
+            background-color: #ffffff; /* Fondo blanco */
+            margin: 20px 0; /* Margen superior e inferior */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            position: relative; /* Para que los círculos sean relativos a este contenedor */
+        }
+        .team h3 {
+            color: #3b5998; /* Azul oscuro pastel */
+            font-size: 1.5em; /* Tamaño para subtítulos */
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+        .team p {
+            color: #555555; /* Texto gris */
+            line-height: 1.4; /* Altura de línea para mejor legibilidad */
+        }
+        .comments {
+            background-color: #ffffff; /* Fondo blanco */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            position: absolute;
+            top: 1%; /* Ajuste de posición vertical */
+            right: -200px; /* Ajuste de posición horizontal */
+            width: 170px; /* Ancho de la sección de comentarios */
+        }
+        .comments h2 {
+            color: #ffffff; /* Color blanco */
+            font-size: 1.8em; /* Tamaño grande para subtítulos */
+            margin-bottom: 15px; /* Espacio inferior */
+            text-align: center;
+        }
+        .comments p {
+            color: #555555; /* Texto gris */
+            line-height: 1.4; /* Altura de línea para mejor legibilidad */
+        }
+        .comments form {
+            margin-top: 20px;
+        }
+        .comments textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        .comments input[type="submit"] {
+            background-color: #3b5998; /* Azul oscuro pastel */
+            color: #ffffff; /* Texto blanco */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comments input[type="submit"]:hover {
+            background-color: #2a3e66; /* Azul oscuro más oscuro */
+        }
+        .comment {
+            background-color: #f2f2f2; /* Fondo gris claro */
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .comment strong {
+            color: #3b5998; /* Azul oscuro pastel */
+        }
+        .comment p {
+            margin: 5px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #3b5998; /* Azul oscuro pastel */
+            color: #ffffff; /* Texto blanco */
+        }
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-top: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selección de Fútbol de Francia</h1>
+    </header>
+
+    <!-- Sección de Historia y Méritos -->
+    <section class="team">
+        <h2>Historia y Méritos</h2>
+        <p>La selección de fútbol de Francia, conocida como <strong>Les Bleus</strong>, ha tenido un notable éxito a nivel internacional. Ganaron la Copa del Mundo por primera vez en <strong>1998</strong>, cuando fueron anfitriones del torneo, y luego repitieron la hazaña en <strong>2018</strong> en Rusia.</p>
+
+        <p>En la Eurocopa, Francia ha ganado el título en <strong>1984</strong> y <strong>2000</strong>, mostrando su dominio en el fútbol europeo.</p>
+
+        <p>Les Bleus son conocidos por su juego dinámico y táctico, así como por la capacidad de producir talentos excepcionales como Zinedine Zidane, Michel Platini y Kylian Mbappé, quienes han dejado una marca duradera en el fútbol mundial.</p>
+
+        <p>Francia continúa siendo una potencia en el fútbol y su estilo de juego sigue siendo admirado y estudiado en todo el mundo.</p>
+    </section>
+
+    <!-- Sección de Imagen de la Selección Actual y Himno Nacional -->
+    <section class="team">
+        <h2>Imagen de la Selección Actual y Himno Nacional</h2>
+        <div style="display: flex; align-items: center;">
+            <div style="flex: 1; text-align: center;">
+<img src="https://th.bing.com/th/id/R.6771e49a27e89b01ffe8e53ca7b1ceb0?rik=9%2bfWmfZPzPEjYg&pid=ImgRaw" alt="Imagen de la Selección de Francia" style="max-width: 100%; height: auto;">
+            </div>
+            <div style="flex: 1; padding-left: 20px;">
+                <h3>Himno Nacional</h3>
+                <audio controls>
+                    <source src="archivos/francia_himno.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Jugadores Destacados -->
+    <section class="team">
+        <h2>Jugadores Destacados</h2>
+        <table>
+            <caption>Jugadores Legendarios de Francia</caption>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Posición</th>
+                    <th>Era</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zinedine Zidane</td>
+                    <td>Centrocampista</td>
+                    <td>1994-2006</td>
+                </tr>
+                <tr>
+                    <td>Michel Platini</td>
+                    <td>Delantero</td>
+                    <td>1976-1987</td>
+                </tr>
+                <tr>
+                    <td>Kylian Mbappé</td>
+                    <td>Delantero</td>
+                    <td>2017-presente</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Sección de Comentarios -->
+    <section class="comments">
+        <h2>Comentarios</h2>
+        <div class="comment">
+            <strong>Juan Pérez</strong>
+                       <p>¡Fantástica página! Francia tiene una historia impresionante en el fútbol.</p>
+        </div>
+        <div class="comment">
+            <strong>Maria García</strong>
+            <p>Me encanta ver jugar a Les Bleus. Siempre dan espectáculo.</p>
+        </div>
+        <form>
+            <label for="comment">Deja tu comentario:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!-- Sección de Uniformes -->
+    <section class="team">
+        <h2>Uniformes</h2>
+        <p>La selección de fútbol de Francia ha tenido varios uniformes icónicos a lo largo de su historia. Actualmente, su uniforme titular consiste en una camiseta azul, shorts blancos y medias rojas. El uniforme alternativo varía entre camisetas blancas o rojas, combinadas con shorts y medias en colores complementarios.</p>
+    </section>
+
+    <!-- Sección de Jugadores Actuales -->
+    <section class="team">
+        <h2>Jugadores Actuales</h2>
+        <p>La selección francesa cuenta con una plantilla de jugadores excepcionales y reconocidos a nivel mundial. Entre los jugadores destacados en el equipo actual se encuentran:</p>
+        <ul>
+            <li>Hugo Lloris (Portero)</li>
+            <li>N'Golo Kanté (Centrocampista)</li>
+            <li>Antoine Griezmann (Delantero)</li>
+            <li>Karim Benzema (Delantero)</li>
+            <li>Paul Pogba (Centrocampista)</li>
+        </ul>
+        <p>Estos jugadores son fundamentales tanto en sus clubes como en la selección nacional de Francia.</p>
+    </section>
+
+    <!-- Sección de Comentarios -->
+    <section class="comments">
+        <h2>Deja tu Comentario</h2>
+        <p>¿Qué opinas sobre la selección de Francia? ¡Déjanos tu comentario!</p>
+        <form action="#" method="post">
+            <textarea name="comment" id="comment" rows="5" placeholder="Escribe aquí tu comentario"></textarea><br>
+            <input type="submit" value="Enviar Comentario">
+        </form>
+        <!-- Comentarios existentes -->
+        <div class="comment">
+            <strong>José Martínez</strong>
+            <p>Francia siempre ha sido una referencia en el fútbol europeo. Admirable su estilo de juego.</p>
+        </div>
+        <div class="comment">
+            <strong>Ana Sánchez</strong>
+            <p>Los logros de Francia en la Copa del Mundo son increíbles. Un equipo lleno de estrellas.</p>
+        </div>
+        <div class="comment">
+            <strong>Pablo Fernández</strong>
+            <p>Francia tiene una gran tradición futbolística. Siempre es emocionante verlos jugar.</p>
+        </div>
+    </section>
+</body>
+</html>
+

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Mejores Equipos Nacionales de Fútbol del Mundo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7; /* Fondo gris claro */
+            color: #333333; /* Texto gris oscuro */
+            max-width: 1000px; /* Ancho máximo de la página */
+            margin: 0 auto; /* Centrar la página en el viewport */
+            padding: 20px; /* Espacio interno */
+            line-height: 1.6; /* Altura de línea para mejor legibilidad */
+            position: relative; /* Para posicionar los círculos */
+        }
+        header {
+            background-color: #292929; /* Fondo negro */
+            color: #c0c0c0; /* Texto color plateado */
+            text-align: center;
+            padding: 1em 0;
+            margin-bottom: 20px; /* Espacio inferior */
+            border-bottom: 3px solid #8b0000; /* Borde inferior rojo oscuro */
+        }
+        h1 {
+            color: #c0c0c0; /* Color plateado */
+            font-size: 2.5em; /* Tamaño grande para el título principal */
+            margin-bottom: 0.5em; /* Espacio inferior */
+        }
+        h2 {
+            color: #ffffff; /* Color blanco */
+            background-color: #3b5998; /* Azul oscuro pastel */
+            padding: 10px;
+            margin-top: 30px; /* Espacio superior */
+            margin-bottom: 15px; /* Espacio inferior */
+            border-radius: 5px;
+            font-size: 1.8em; /* Tamaño grande para subtítulos */
+        }
+        .team {
+            background-color: #ffffff; /* Fondo blanco */
+            margin: 20px 0; /* Margen superior e inferior */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            position: relative; /* Para que los círculos sean relativos a este contenedor */
+        }
+        .team h3 {
+            color: #3b5998; /* Azul oscuro pastel */
+            font-size: 1.5em; /* Tamaño para subtítulos */
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+        .team p {
+            color: #555555; /* Texto gris */
+            line-height: 1.4; /* Altura de línea para mejor legibilidad */
+        }
+        .circle {
+            width: 150px; /* Tamaño del círculo */
+            height: 150px; /* Tamaño del círculo */
+            background-color: #3b5998; /* Azul oscuro pastel */
+            border-radius: 50%; /* Forma de círculo */
+            position: absolute; /* Posicionamiento absoluto */
+        }
+        .circle.left {
+            left: -180px; /* Ajuste para estar más pegado al borde izquierdo */
+            top: 19%; /* Ajuste de posición vertical */
+        }
+        .circle.left:nth-child(2) {
+            top: 38%; /* Ajuste de posición vertical */
+        }
+        .circle.left:nth-child(3) {
+            top: 58%; /* Ajuste de posición vertical */
+        }
+        .circle.right {
+            right: -180px; /* Ajuste para estar más pegado al borde derecho */
+            top: 10%; /* Ajuste de posición vertical */
+        }
+        .circle.right:nth-child(2) {
+            top: 20%; /* Ajuste de posición vertical */
+        }
+        .circle.right:nth-child(3) {
+            top: 30%; /* Ajuste de posición vertical */
+        }
+        .circle img {
+            width: 100px; /* Tamaño de la imagen dentro del círculo */
+            height: 100px; /* Tamaño de la imagen dentro del círculo */
+            display: block; /* Para centrar la imagen */
+            margin: 25px auto; /* Alineación vertical de la imagen */
+            border-radius: 50%; /* Forma de círculo */
+        }
+        .comments {
+            background-color: #ffffff; /* Fondo blanco */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            position: absolute;
+            top: 19%;
+            right: -200px;
+            width: 170px; /* Ancho de la sección de comentarios */
+        }
+        .comments h2 {
+            color: #ffffff; /* Cambio a color blanco */
+            font-size: 1.8em; /* Tamaño grande para subtítulos */
+            margin-bottom: 15px; /* Espacio inferior */
+            text-align: center;
+        }
+        .comments p {
+            color: #555555; /* Texto gris */
+            line-height: 1.4; /* Altura de línea para mejor legibilidad */
+        }
+        .comments form {
+            margin-top: 20px;
+        }
+        .comments textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        .comments input[type="submit"] {
+            background-color: #3b5998; /* Azul oscuro pastel */
+            color: #ffffff; /* Texto blanco */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comments input[type="submit"]:hover {
+            background-color: #2a3e66; /* Azul oscuro más oscuro */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff; /* Fondo blanco */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+        table caption {
+            font-size: 1.5em;
+            padding: 10px;
+            background-color: #3b5998; /* Azul oscuro pastel */
+            color: #ffffff; /* Texto blanco */
+            border-radius: 10px 10px 0 0; /* Esquinas redondeadas solo arriba */
+        }
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dddddd; /* Borde inferior gris claro */
+        }
+        table th {
+            background-color: #3b5998; /* Azul oscuro pastel */
+            color: #ffffff; /* Texto blanco */
+            border-radius: 0 0 10px 10px; /* Esquinas redondeadas solo abajo */
+        }
+        table tr:hover {
+            background-color: #f2f2f2; /* Fondo gris claro al pasar el cursor */
+        }
+        table a {
+            text-decoration: none;
+            color: #333333; /* Texto gris oscuro */
+            font-weight: bold;
+        }
+        table a:hover {
+            color: #3b5998; /* Cambio de color al pasar el cursor */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Los Mejores Equipos Nacionales de Fútbol del Mundo</h1>
+    </header>
+    <main>
+        <!-- Círculos izquierdos con imágenes -->
+        <div class="circle left">
+            <img src="https://i.pinimg.com/564x/76/51/29/7651294acf5a9e5032efa2f00c49c9bc.jpg" alt="Imagen izquierda 1">
+        </div>
+        <div class="circle left">
+            <img src="https://i.pinimg.com/564x/8a/41/1e/8a411e3b71c4b9f6757c7805b0bffed7.jpg" alt="Imagen izquierda 2">
+        </div>
+        <div class="circle left">
+            <img src="https://i.pinimg.com/564x/4d/b7/51/4db75170099234530056f2430bcf971d.jpg" alt="Imagen izquierda 3">
+        </div>
+        
+        <!-- Sección de comentarios -->
+        <section class="comments">
+            <h2 style="color: #ffffff;">Deja tu Comentario</h2>
+            <p>¿Qué equipo nacional de fútbol consideras el mejor y por qué? ¡Déjanos tu opinión!</p>
+            <form action="#" method="post">
+                <textarea name="comment" id="comment" rows="5" placeholder="Escribe aquí tu comentario"></textarea><br>
+                <input type="submit" value="Enviar Comentario">
+            </form>
+			<!-- Comentarios falsos -->
+            
+            <div class="comment">
+                <strong>Ignacia </strong>
+                <p>Para mí, Argentina es el mejor.#el mejor, número 1 </p>
+            </div>
+            <div class="comment">
+                <strong>Polo </strong>
+                <p>Por la pasión y talento Brasil es el número uno. </p>
+            </div>
+        </section>
+        
+        <!-- Sección de ranking -->
+        <section id="ranking" class="team">
+            <h2>Parámetros y Ranking de los Mejores Equipos</h2>
+            <h3>Criterios de Evaluación</h3>
+            <p>Los criterios para determinar los mejores equipos nacionales de fútbol incluyen:</p>
+            <ul>
+                <li>Desempeño en competiciones internacionales como la Copa del Mundo y la Eurocopa.</li>
+                <li>Consistencia a lo largo de varias décadas.</li>
+                <li>Número de títulos ganados.</li>
+                <li>Calidad de jugadores históricos y actuales.</li>
+                <li>Rendimiento en competiciones continentales como la Copa América.</li>
+            </ul>
+            <h3>Metodología de Ranking</h3>
+            <p>Existen diversas organizaciones y medios que publican rankings periódicos de equipos nacionales basados en estos criterios. Entre los más reconocidos están:</p>
+            <ul>
+                <li>FIFA Rankings</li>
+                <li>Ranking de la IFFHS (International Federation of Football History & Statistics)</li>
+                <li>Ranking de la CBF (Confederação Brasileira de Futebol)</li>
+            </ul>
+            <p>Estos rankings consideran resultados recientes, historial de victorias, y otros factores relevantes para posicionar a los equipos a nivel global.</p>
+        </section>
+		<table>
+    <caption>Tabla de los Mejores Equipos Nacionales de Fútbol</caption>
+    <thead>
+        <tr>
+            <th>País</th>
+            <th>Enlace a Subpágina</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Alemania</td>
+            <td><a href="alemania.html">Alemania</a></td>
+        </tr>
+        <tr>
+            <td>Argentina</td>
+            <td><a href="argentina.html">Argentina</a></td>
+        </tr>
+        <tr>
+            <td>Brasil</td>
+            <td><a href="brasil.html">Brasil</a></td>
+        </tr>
+        <tr>
+            <td>Francia</td>
+            <td><a href="francia.html">Francia</a></td>
+        </tr>
+        <tr>
+            <td>Italia</td>
+            <td><a href="italia.html">Italia</a></td>
+        </tr>
+    </tbody>
+</table>
+
+    </main>
+</body>
+</html>
